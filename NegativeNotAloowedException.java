@@ -9,7 +9,7 @@ public NegativeNotAloowedException() {
 	// TODO Auto-generated constructor stub
 System.out.println("Negative Not Allowed");
 }
-public NegativeNotAloowedException(int num){
+public NegativeNotAloowedException(String num){
 	System.out.println(num);
 }
 }
