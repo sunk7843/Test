@@ -5,7 +5,7 @@ static int count; // to count no of call to add method
 	
 	public static void main(String[] args) {
 		try{
-		System.out.println(add("//-1,2**5\n-8\n-821//"));
+		System.out.println("Total number after adding: " +add("//-1,2**5\n-8\n-821,//"));
 	}catch (Exception e) {
 		
 		e.printStackTrace();
@@ -34,7 +34,7 @@ static int count; // to count no of call to add method
 						num+=c1[i];
 					}
 					
-					if(i==c1.length-1||Integer.parseInt(num)>0){
+					if(i==c1.length-1 && Integer.parseInt(num)>0){
 						sum+=Integer.parseInt(num);
 						}
 					
@@ -43,9 +43,10 @@ static int count; // to count no of call to add method
 						
 						neNum+=num;
 						num="0";
-					}else if(i==c1.length-1){
+					}else if(i==c1.length-1 && neNum!=null && !neNum.isEmpty()){
 						throw new NegativeNotAloowedException(neNum);
-						}else if(Integer.parseInt(num)>1000){
+							
+					}else if(Integer.parseInt(num)>1000){
 					sum+=Integer.parseInt(num)-1000;
 				} else if(Integer.parseInt(num)>=0){
 					sum+=Integer.parseInt(num);
